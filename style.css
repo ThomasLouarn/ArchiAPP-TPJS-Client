@@ -89,17 +89,26 @@ li {
 
 form {
   border-top: 1px solid #ddd;
-  gap: 10px;
+  gap: 8px;
   padding: 10px;
   display: flex;
+  flex-direction: column;
 }
 
+.message-row {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"],
 textarea {
   flex: 1;
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #ddd;
-  height: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  resize: vertical;
 }
 
 button {
@@ -141,6 +150,7 @@ body.dark .date {
   color: #aaa;
 }
 
+body.dark input[type="text"],
 body.dark textarea {
   background: #2a2a2a;
   color: white;

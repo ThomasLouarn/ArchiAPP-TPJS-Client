@@ -84,6 +84,7 @@ function update() {
   fetch(url + '/msg/getAll')
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       const msgsText = data.map((m) => (`
           <li>
             <div class="message-header">
@@ -127,9 +128,13 @@ function sendMessage(event) {
         msg: msg
       })
     })
-
-    // then get the new list and update
-    update();
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          // then get the new list and update
+          update();
+        }
+      })
   }
 }
 

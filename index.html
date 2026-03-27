@@ -32,9 +32,11 @@
 
     <!-- Formulaire d'envoi -->
     <form id="send-message-form">
-      <textarea id="pseudo-input" placeholder="Pseudonyme"></textarea>
-      <textarea id="text-message" placeholder="Entrez votre message ici"></textarea>
-      <button type="submit">Envoyer</button>
+      <input type="text" id="pseudo-input" placeholder="Pseudonyme" />
+      <div class="message-row">
+        <textarea id="text-message" placeholder="Entrez votre message ici" rows="3"></textarea>
+        <button type="submit">Envoyer</button>
+      </div>
     </form>
 
   </div>
