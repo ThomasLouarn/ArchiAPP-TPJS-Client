@@ -95,3 +95,14 @@ toggleModeButton.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   isDarkMode = !isDarkMode;
 });
+
+// link with the backend
+const url = 'https://3fa48f10-af5c-43e1-ae96-e70bf331a68b-00-1tdz64ru2arzr.picard.replit.dev'
+
+// get the first message
+fetch(url + '/msg/getAll')
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    alert(data[0])
+  })
